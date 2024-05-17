@@ -6,6 +6,7 @@ build/
 !**/src/test/**/build/
 .idea
 *.iml
+out
 
 
 ### STS ###
