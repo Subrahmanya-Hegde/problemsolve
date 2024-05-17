@@ -1,6 +1,0 @@
-
-W
-java:S1118":Add a private constructor to hide the implicit public one.(­ÒÖÛ8ôë÷1
-G	java:S1068"+Replace this use of System.out by a logger.(Ã“Š8éûë÷1
-Q
-java:S1144"4Remove this unused private "createParagraph" method.(Õ®Ó8êûë÷1
