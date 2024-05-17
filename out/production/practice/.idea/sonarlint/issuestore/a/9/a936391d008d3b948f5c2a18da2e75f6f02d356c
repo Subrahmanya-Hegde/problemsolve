@@ -1,0 +1,20 @@
+
+g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(“ÜÏ­ûÿÿÿÿ8Çîˆ¿õ1
+g	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(“ÜÏ­ûÿÿÿÿ8Èîˆ¿õ1
+Q
+java:S3740"/Provide the parametrized type for this generic.(ôøëµûÿÿÿÿ8Èîˆ¿õ1
+L
+java:S3740"/Provide the parametrized type for this generic.(µˆÀÀ8Éîˆ¿õ1
+L
+java:S3740"/Provide the parametrized type for this generic.(µˆÀÀ8Éîˆ¿õ1
+L
+java:S37408"/Provide the parametrized type for this generic.(¥¿’ê8Éîˆ¿õ1
+Q
+java:S3740F"/Provide the parametrized type for this generic.(Êß”­ıÿÿÿÿ8Éîˆ¿õ1
+L
+java:S3740J"/Provide the parametrized type for this generic.(…Ã•8Éîˆ¿õ1
+G	java:S106
+"+Replace this use of System.out by a logger.(ƒØ“ 8Ùîˆ¿õ1
+L	java:S106"+Replace this use of System.out by a logger.(´ÕªŒûÿÿÿÿ8Úîˆ¿õ1
+G	java:S106"+Replace this use of System.out by a logger.(ƒØ“ 8³Á‰¿õ1
+L	java:S106"+Replace this use of System.out by a logger.(ÚÒÎ†şÿÿÿÿ8µ„Š¿õ1

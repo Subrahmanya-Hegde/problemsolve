@@ -1,0 +1,9 @@
+
+o
+java:S2095"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ΓΘΔ΄ώÿÿÿÿ8¥ογδ1
+F	java:S1062"+Replace this use of System.out by a logger.(ϊνq8ªογδ1
+G	java:S106F"+Replace this use of System.out by a logger.(Θβ«8«ογδ1
+W
+java:S4719O":Replace Charset.forName() call with StandardCharsets.UTF_8(ƒ…Ά8­ογδ1
+L	java:S106P"+Replace this use of System.out by a logger.(³ΐ“όÿÿÿÿ8­ογδ1
+L	java:S106R"+Replace this use of System.out by a logger.(Χ‡½ωÿÿÿÿ8κ‚μδ1
