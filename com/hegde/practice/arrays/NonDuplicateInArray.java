@@ -1,5 +1,8 @@
 package com.hegde.practice.arrays;
 
+/**
+ * Non duplicate array. Bring all the non duplicate at the beginning of the array and make other elements 0;
+ */
 public class NonDuplicateInArray {
 
     public static void main(String[] args) {

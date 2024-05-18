@@ -1,5 +1,8 @@
 package com.hegde.practice.datastructures;
 
+/**
+ * Custom stack
+ */
 public class CustomStackImpl {
 
     public static void main(String[] args) {
