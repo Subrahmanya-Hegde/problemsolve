@@ -3,8 +3,24 @@ package com.hegde.practice.string;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class SymmetricEncoding {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        String[] array = new String[n];
+        for(int i = 0; i < n; i++) {
+            int size = sc.nextInt();
+            array[i] = getSymmetricDecoded(sc.next());
+        }
+
+        for(int i = 0; i < n; i++) {
+            System.out.println(array[i]);
+        }
+        sc.close();
+    }
 
     private static String getSymmetricDecoded(String input){
         List<Character> uniqueStr = getUniquerCharString(input);
