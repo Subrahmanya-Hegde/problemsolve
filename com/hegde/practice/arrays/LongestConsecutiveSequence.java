@@ -5,9 +5,15 @@ import java.util.Arrays;
 public class LongestConsecutiveSequence {
 
     public int longestConsecutiveSequence(int[] array){
+        if(array == null | array.length == 0)
+            return 0;
+
         int currentSequenceCount = 1, maxLongestSequence = 1;
         Arrays.sort(array);
         for(int i = 1; i < array.length; i++){
+            if (array[i] == array[i - 1]) {
+                continue;
+            }
             if(array[i] - array[i - 1] == 1){
                 currentSequenceCount++;
             }else {
