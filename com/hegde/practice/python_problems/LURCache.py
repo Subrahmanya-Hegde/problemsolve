@@ -37,6 +37,8 @@ class LRUCache:
             self._push_node_at_the_top(node)
 
             return node.value
+        else:
+            return None
 
 
     def set(self, key, val):

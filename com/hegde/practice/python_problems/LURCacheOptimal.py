@@ -1,5 +1,3 @@
-import collections
-
 from collections import deque
 
 class LRUCache:
