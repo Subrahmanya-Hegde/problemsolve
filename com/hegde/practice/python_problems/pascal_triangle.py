@@ -13,3 +13,17 @@ class Solution:
             current_row.append(1)
             pascal_triangles.append(current_row)
         return pascal_triangles
+
+    def generate_recursive(self, numRows: int) -> List[List[int]]:
+        if numRows == 0:
+            return []
+        if numRows == 1:
+            return [[1]]
+        prevRows = self.generate_recursive(numRows - 1)
+        newRow = [1] * numRows
+
+        for i in range(1, numRows - 1):
+            newRow[i] = prevRows[-1][i - 1] + prevRows[-1][i]
+
+        prevRows.append(newRow)
+        return prevRows
