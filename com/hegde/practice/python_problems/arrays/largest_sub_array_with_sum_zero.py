@@ -15,7 +15,7 @@ class Solution:
         for i, num in enumerate(arr):
             prefix_sum += num
             if prefix_sum == 0:
-                max_length = max(i + 1, max_length)
+                max_length = i + 1
             elif prefix_sum in prefix_sum_index:
                 max_length = max(i - prefix_sum_index[prefix_sum], max_length)
             else:
