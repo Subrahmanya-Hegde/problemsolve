@@ -1,17 +1,26 @@
-package com.hegde.practice.cf;
+package com.hegde.problemsolve;
 
 import java.io.*;
 import java.util.*;
 
 public class Main{
     public static void main(String[] args) throws IOException {
-        int t = scanInt();
+        int t = 1;
         while (t-- > 0) {
             solve();
         }
     }
 
     public static void solve() throws IOException {
+        int n = scanInt();
+        int k = scanInt();
+        int[] array = scanIntArray(n);
+        int ans = 0;
+        for(int i = 0; i < array.length; i++){
+            if (array[i] > k)
+                ans++;
+        }
+        print(ans);
     }
 
     static int MOD = 1_000_000_007;
