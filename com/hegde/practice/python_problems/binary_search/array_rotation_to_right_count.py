@@ -4,6 +4,7 @@ class Solution:
     Find out how many times an array is rotated to the right.
     Question - [3, 4, 5, 1, 2] Ans = 3 right rotations.
     Original - [1, 2, 3, 4, 5]. Rotations - 1st - [5, 1, 2, 3, 4], 2nd - [4, 5, 1, 2, 3], 3rd - [3, 4, 5, 1, 2]
+    Just find the index of the smallest number and that is the right rotated number.
     """
     def findKRotation(self, nums):
         n = len(nums)

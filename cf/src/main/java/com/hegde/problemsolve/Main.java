@@ -1,5 +1,3 @@
-package com.hegde.problemsolve;
-
 import java.io.*;
 import java.util.*;
 
@@ -15,10 +13,12 @@ public class Main{
         int n = scanInt();
         int k = scanInt();
         int[] array = scanIntArray(n);
+        int threshold = array[k - 1];
         int ans = 0;
-        for(int i = 0; i < array.length; i++){
-            if (array[i] > k)
+        for(int number: array){
+            if (number >= threshold && number > 0){
                 ans++;
+            }
         }
         print(ans);
     }
