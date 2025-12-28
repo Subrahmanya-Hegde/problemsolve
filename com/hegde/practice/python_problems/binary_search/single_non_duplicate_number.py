@@ -2,7 +2,6 @@ from typing import List
 
 
 """
-
 https://leetcode.com/problems/single-element-in-a-sorted-array/
 O(nlogn) solution -
 Logic - pairs should appear on even odd indices. 
