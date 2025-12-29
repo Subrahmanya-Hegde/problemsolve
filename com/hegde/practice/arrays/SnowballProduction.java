@@ -9,7 +9,7 @@ public class SnowballProduction {
     public long totalSnowMan(int n, int[] head, int[] torso, int[] legs){
         int goodHeadTorso = countGoodShifts(n, head, torso);
         int goodTorsoLegs = countGoodShifts(n, torso, legs);
-        return (long) n * goodHeadTorso * goodTorsoLegs);
+        return (long) n * goodHeadTorso * goodTorsoLegs;
     }
 
     static int countGoodShifts(int n, int[] x, int[] y) {
