@@ -2,7 +2,6 @@ package com.hegde.practice.tree;
 
 import com.hegde.practice.helper.TreeNode;
 
-
 /**
  * @see <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/">
  * 230. Kth Smallest Element in a BST</a>

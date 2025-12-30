@@ -46,7 +46,8 @@ class MultiIterator:
 
 
     def get_state(self):
+        return None
 
 
     def set_state(self, state):
-
+        return None

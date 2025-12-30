@@ -1,6 +1,5 @@
 package com.hegde.practice.linkedlist;
 
-
 import com.hegde.practice.helper.DoubleLinkedList;
 
 import java.util.HashMap;

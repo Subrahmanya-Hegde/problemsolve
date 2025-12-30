@@ -1,4 +1,4 @@
-package com.hegde.practice.interval;
+package practice.interval;
 
 import java.util.Arrays;
 import java.util.Comparator;
