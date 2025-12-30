@@ -7,6 +7,7 @@ We can apply binary search because answer can be any peak element in the grid.
 So we start from the middle column. Then find the max number in the row. 
 Because only that number can be the peak number. Then search for the neighbors if they are greater than the current max.
 If current max is greater then we found the peak element. If left neighbor is greater then move left, else move right. 
+We can apply binary search only because there are no equal adjacent elements.
 """
 class Solution:
 
