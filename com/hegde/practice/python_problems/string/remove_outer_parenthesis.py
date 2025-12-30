@@ -1,6 +1,8 @@
 import io
 
-
+"""
+https://leetcode.com/problems/remove-outermost-parentheses/
+"""
 class Solution:
     def remove_outer_parentheses(self, s: str) -> str:
         stack = list()
