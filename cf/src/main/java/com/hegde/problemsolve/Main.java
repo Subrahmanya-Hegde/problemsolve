@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main{
     public static void main(String[] args) throws IOException {
-        int t = 1;
+        int t = scanInt();
         while (t-- > 0) {
             solve();
         }
@@ -11,16 +11,27 @@ public class Main{
 
     public static void solve() throws IOException {
         int n = scanInt();
-        int k = scanInt();
-        int[] array = scanIntArray(n);
-        int threshold = array[k - 1];
-        int ans = 0;
-        for(int number: array){
-            if (number >= threshold && number > 0){
-                ans++;
+        int[] a = scanIntArray(n);
+        int[] b = scanIntArray(n);
+        int[] c = scanIntArray(n);
+        int goodAB = countGoodShifts(n, a, b);
+        int goodBC = countGoodShifts(n, b, c);
+        print((long) n * goodAB * goodBC);
+    }
+
+    static int countGoodShifts(int n, int[] x, int[] y) {
+        int count = 0;
+        for (int shift = 0; shift < n; shift++) {
+            boolean ok = true;
+            for (int i = 0; i < n; i++) {
+                if (x[i] >= y[(i + shift) % n]) {
+                    ok = false;
+                    break;
+                }
             }
+            if (ok) count++;
         }
-        print(ans);
+        return count;
     }
 
     static int MOD = 1_000_000_007;
