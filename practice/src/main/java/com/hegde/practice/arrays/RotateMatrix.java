@@ -1,5 +1,9 @@
 package com.hegde.practice.arrays;
 
+/**
+ * https://leetcode.com/problems/rotate-image/description/
+ * Approach - Get the transpose. And then reverse the rows.
+ */
 public class RotateMatrix {
 
     public void rotate(int[][] matrix) {

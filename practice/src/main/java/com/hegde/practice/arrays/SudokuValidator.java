@@ -3,6 +3,9 @@ package com.hegde.practice.arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * https://leetcode.com/problems/valid-sudoku/description/
+ */
 public class SudokuValidator {
 
     private static final String ROW_VALIDATOR_KEY = "row_%d_num_%c";

@@ -1,5 +1,8 @@
 package com.hegde.practice.arrays;
 
+/**
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+ */
 public class StockBuyAndSell {
 
     public int maxProfitFromBuyAndSellingStock(int[] stockPrices){

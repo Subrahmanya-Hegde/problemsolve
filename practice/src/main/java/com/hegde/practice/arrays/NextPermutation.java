@@ -1,5 +1,11 @@
 package com.hegde.practice.arrays;
 
+/**
+ * https://leetcode.com/problems/next-permutation/description/
+ * Start from the right, find the nums[i] < nums[i + 1].
+ * Because this is where we should get the next permutation.
+ * Then swap with the next bigger number and reverse the right side.
+ */
 public class NextPermutation {
     public void nextPermutation(int[] nums) {
 
