@@ -3,6 +3,9 @@ package practice.interval;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * https://leetcode.com/problems/count-days-without-meetings/description/
+ */
 public class DaysWithoutAnyMeetings {
 
     static Comparator<int[]> comparator = Comparator.comparingInt(o -> o[0]);

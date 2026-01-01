@@ -1,5 +1,8 @@
 package com.hegde.practice.graph;
 
+/**
+ * https://leetcode.com/problems/minimum-path-sum/description/
+ */
 public class MinSumToReachRightBottom {
 
     public static int getMinSumToReachBottomRight(int[][] grid){

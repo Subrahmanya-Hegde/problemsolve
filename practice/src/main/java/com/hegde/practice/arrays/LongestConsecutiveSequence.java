@@ -2,6 +2,9 @@ package com.hegde.practice.arrays;
 
 import java.util.Arrays;
 
+/**
+ * https://leetcode.com/problems/longest-consecutive-sequence/description/
+ */
 public class LongestConsecutiveSequence {
 
     public int longestConsecutiveSequence(int[] array){

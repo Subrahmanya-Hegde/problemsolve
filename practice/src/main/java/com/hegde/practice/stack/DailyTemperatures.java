@@ -4,6 +4,9 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+/**
+ * https://leetcode.com/problems/daily-temperatures/
+ */
 public class DailyTemperatures {
 
     public static int[] dailyTemperatures(int[] temperatures) {

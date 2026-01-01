@@ -3,6 +3,9 @@ package com.hegde.practice.graph;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
+/**
+ * https://leetcode.com/problems/rotting-oranges/
+ */
 public class RottenOranges {
 
     public int orangesRotting(int[][] grid) {

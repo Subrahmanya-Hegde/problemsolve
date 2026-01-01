@@ -3,6 +3,9 @@ package com.hegde.practice.combinatorics;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://leetcode.com/problems/subsets/description/
+ */
 public class SubSets {
 
     public List<List<Integer>> subsets(int[] nums) {

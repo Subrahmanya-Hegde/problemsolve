@@ -2,6 +2,9 @@ package com.hegde.practice.stack;
 
 import java.util.*;
 
+/**
+ * https://leetcode.com/problems/min-stack/
+ */
 public class MinStack {
 
     public static class Node{

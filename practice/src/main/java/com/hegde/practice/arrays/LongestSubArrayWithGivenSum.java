@@ -3,6 +3,9 @@ package com.hegde.practice.arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * https://leetcode.com/problems/subarray-sum-equals-k/description/
+ */
 public class LongestSubArrayWithGivenSum {
     public static int longestSubArrayWithSumK(int[] array, int target){
         int length = array.length, answer = 0;
