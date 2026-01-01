@@ -1,7 +1,9 @@
+package com.hegde.problemsolve;
+
 import java.io.*;
 import java.util.*;
 
-public class Main{
+class Main {
     public static void main(String[] args) throws IOException {
         int t = scanInt();
         while (t-- > 0) {
@@ -10,28 +12,7 @@ public class Main{
     }
 
     public static void solve() throws IOException {
-        int n = scanInt();
-        int[] a = scanIntArray(n);
-        int[] b = scanIntArray(n);
-        int[] c = scanIntArray(n);
-        int goodAB = countGoodShifts(n, a, b);
-        int goodBC = countGoodShifts(n, b, c);
-        print((long) n * goodAB * goodBC);
-    }
 
-    static int countGoodShifts(int n, int[] x, int[] y) {
-        int count = 0;
-        for (int shift = 0; shift < n; shift++) {
-            boolean ok = true;
-            for (int i = 0; i < n; i++) {
-                if (x[i] >= y[(i + shift) % n]) {
-                    ok = false;
-                    break;
-                }
-            }
-            if (ok) count++;
-        }
-        return count;
     }
 
     static int MOD = 1_000_000_007;
@@ -183,6 +164,16 @@ public class Main{
         long inv = pow(dr, MOD - 2);// using fermat little theorm, inverse(x)=pow(x,m-2) given m is prime
         long ans = (nr * 1l * inv) % MOD;
         return ans;
+    }
+
+    static void printWithoutNewLine(Object o) throws IOException {
+        bw.write(o.toString());
+        bw.flush();
+    }
+
+    static void printNewLine() throws IOException {
+        bw.newLine();
+        bw.flush();
     }
 
     static void print(Object o) throws IOException {
