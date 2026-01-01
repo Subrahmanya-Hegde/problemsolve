@@ -1,9 +1,7 @@
-package com.hegde.problemsolve;
-
 import java.io.*;
 import java.util.*;
 
-class Main {
+public class Main {
     public static void main(String[] args) throws IOException {
         int t = scanInt();
         while (t-- > 0) {
@@ -40,6 +38,16 @@ class Main {
             array[i] = scanInt();
         }
         return array;
+    }
+
+    static int[][] scanInt2DArray(int rows, int columns) throws IOException {
+        int[][] matrix = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns; j++){
+                matrix[i][j] = scanInt();
+            }
+        }
+        return matrix;
     }
 
     static long[] scanLongArray(int size) throws IOException {
