@@ -22,4 +22,15 @@ public class SubSets {
             currentSubSet.removeLast();
         }
     }
+
+    public void generateSubSetsRecursive(int[] nums, List<List<Integer>> ans, int index, List<Integer> currentSubSet) {
+        if(index == nums.length){
+            ans.add(new ArrayList<>(currentSubSet));
+            return;
+        }
+        currentSubSet.add(nums[index]);
+        generateSubSetsRecursive(nums, ans, index + 1, currentSubSet);
+        currentSubSet.removeLast();
+        generateSubSetsRecursive(nums, ans, index + 1, currentSubSet);
+    }
 }
