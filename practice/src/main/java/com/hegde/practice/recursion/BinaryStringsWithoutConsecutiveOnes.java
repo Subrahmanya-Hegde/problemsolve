@@ -3,7 +3,6 @@ package com.hegde.practice.recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public cla
 /**
  * https://takeuforward.org/plus/dsa/problems/generate-binary-strings-without-consecutive-1s
  */
