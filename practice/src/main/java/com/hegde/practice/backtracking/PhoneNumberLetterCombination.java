@@ -31,15 +31,15 @@ public class PhoneNumberLetterCombination {
         return result;
     }
 
-    private void backtrack(int di, String digits, StringBuilder sb, List<String> result){
-        if(di >= digits.length()){
+    private void backtrack(int digitIterator, String digits, StringBuilder sb, List<String> result){
+        if(digitIterator >= digits.length()){
             result.add(sb.toString());
             return;
         }
-        String letters = charMap.get(digits.charAt(di));
+        String letters = charMap.get(digits.charAt(digitIterator));
         for(char c: letters.toCharArray()){
             sb.append(c);
-            backtrack(di + 1, digits, sb, result);
+            backtrack(digitIterator + 1, digits, sb, result);
             sb.deleteCharAt(sb.length() - 1);
         }
     }
