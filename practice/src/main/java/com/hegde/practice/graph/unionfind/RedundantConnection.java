@@ -5,32 +5,57 @@ package com.hegde.practice.graph.unionfind;
  * https://leetcode.com/problems/redundant-connection/
  */
 public class RedundantConnection {
+
     public int[] findRedundantConnection(int[][] edges) {
-        int[] leader = new int[edges.length + 1];
-        assignSelfAsLeader(leader);
+        return findRedundantConnectionUsingUnionFind(edges);
+    }
 
-        for(int[] edge : edges){
-            int leaderOfStartNode = findLeader(edge[0], leader);
-            int leaderOfEndNode = findLeader(edge[1], leader);
+    private int[] findRedundantConnectionUsingUnionFind(int[][] edges) {
+        int n = edges.length;
 
-            if(leaderOfStartNode == leaderOfEndNode){
+        int[] parent = new int[n + 1];
+        int[] size = new int[n + 1];
+
+        //By default, add self as a parent and add size as 1 for all the nodes.
+        for (int node = 1; node <= n; node++) {
+            parent[node] = node;
+            size[node] = 1;
+        }
+
+        for (int[] edge : edges) {
+            int nodeA = edge[0];
+            int nodeB = edge[1];
+
+            int rootA = findAndPathCompress(nodeA, parent);
+            int rootB = findAndPathCompress(nodeB, parent);
+
+            if (rootA == rootB) {
                 return edge;
             }
-            leader[leaderOfStartNode] = leaderOfEndNode;
+            unionBySize(rootA, rootB, parent, size);
         }
+
         return new int[0];
     }
 
-    private static void assignSelfAsLeader(int[] parents) {
-        for (int node = 1; node < parents.length; node++) {
-            parents[node] = node;
+    private void unionBySize(int rootA, int rootB, int[] parent, int[] size) {
+        if (rootA == rootB) {
+            return;
+        }
+
+        if (size[rootA] < size[rootB]) {
+            parent[rootA] = rootB;
+            size[rootB] += size[rootA];
+        } else {
+            parent[rootB] = rootA;
+            size[rootA] += size[rootB];
         }
     }
 
-    private int findLeader(int node, int[] leader) {
-        if (leader[node] == node) {
-            return node;
+    private int findAndPathCompress(int node, int[] parent) {
+        if (parent[node] != node) {
+            parent[node] = findAndPathCompress(parent[node], parent); // path compression
         }
-        return findLeader(leader[node], leader);
+        return parent[node];
     }
 }
