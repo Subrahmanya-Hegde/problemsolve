@@ -1,4 +1,4 @@
-package com.hegde.practice.tree.bfs;
+package com.hegde.practice.tree;
 
 import com.hegde.practice.helper.TreeNode;
 
@@ -8,10 +8,10 @@ import com.hegde.practice.helper.TreeNode;
 public class MergeTree {
 
     public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
-        return bfs(root1, root2);
+        return dfs(root1, root2);
     }
 
-    private TreeNode bfs(TreeNode root1, TreeNode root2){
+    private TreeNode dfs(TreeNode root1, TreeNode root2){
         if (root1 == null) return root2;
         if (root2 == null) return root1;
 
