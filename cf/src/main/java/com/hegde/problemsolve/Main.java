@@ -6,11 +6,32 @@ public class Main {
         int t = scanInt();
         while (t-- > 0) {
             solve();
+            printNewLine();
         }
     }
 
     public static void solve() throws IOException {
-
+        int n = scanInt();
+        if(n == 2){
+            printWithoutNewLine("YES");
+            return;
+        }
+        int[] array = scanIntArray(n);
+        int[] sortedArray = array.clone();
+        Arrays.sort(sortedArray);
+        Map<Integer, Integer> pos = new HashMap<>();
+        for(int i = 0; i < array.length; i++){
+            pos.put(array[i], i);
+        }
+        for(int i = 1; i < sortedArray.length; i++){
+            int p1 = pos.get(sortedArray[i - 1]) & 1;
+            int p2 = pos.get(sortedArray[i]) & 1;
+            if(p1 == p2){
+                printWithoutNewLine("NO");
+                return;
+            }
+        }
+        printWithoutNewLine("YES");
     }
 
     static int MOD = 1_000_000_007;
