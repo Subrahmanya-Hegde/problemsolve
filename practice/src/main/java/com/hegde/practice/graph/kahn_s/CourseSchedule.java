@@ -20,7 +20,13 @@ import java.util.*;
  */
 public class CourseSchedule {
 
+    private static int SOURCE = 1;
+    private static int DESTINATION = 0;
 
+    /**
+     * Input for example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+     * SOURCE: 1 and DESTINATION: 0. i.e. 1 -> 0.
+     */
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> adjacencyList = getAdjacencyList(prerequisites);
         int[] inDegree = getInDegree(numCourses, prerequisites);
@@ -43,7 +49,7 @@ public class CourseSchedule {
     private int[] getInDegree(int nodes, int[][] graph){
         int[] inDegree = new int[nodes];
         for(int[] edge: graph){
-            inDegree[edge[0]]++;
+            inDegree[edge[DESTINATION]]++;
         }
         return inDegree;
     }
@@ -60,7 +66,7 @@ public class CourseSchedule {
     Map<Integer, List<Integer>> getAdjacencyList(int[][] graph){
         Map<Integer, List<Integer>> adjacencyList = new HashMap<>();
         for(int[] edge: graph){
-            adjacencyList.computeIfAbsent(edge[1], key -> new ArrayList<>()).add(edge[0]);
+            adjacencyList.computeIfAbsent(edge[SOURCE], key -> new ArrayList<>()).add(edge[DESTINATION]);
         }
         return adjacencyList;
     }
