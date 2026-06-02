@@ -1,6 +1,7 @@
 package com.hegde.practice.arrays;
 
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * https://leetcode.com/problems/longest-consecutive-sequence/description/
@@ -8,22 +9,22 @@ import java.util.Arrays;
 public class LongestConsecutiveSequence {
 
     public int longestConsecutiveSequence(int[] array){
-        if(array == null | array.length == 0)
-            return 0;
+        Set<Integer> set = new HashSet<>();
+        for(int num : array){
+            set.add(num);
+        }
 
-        int currentSequenceCount = 1, maxLongestSequence = 1;
-        Arrays.sort(array);
-        for(int i = 1; i < array.length; i++){
-            if (array[i] == array[i - 1]) {
+        int longestConsecutiveLength = 0;
+        for(int num: set){
+            if(set.contains(num - 1)){
                 continue;
             }
-            if(array[i] - array[i - 1] == 1){
-                currentSequenceCount++;
-            }else {
-                maxLongestSequence = Math.max(currentSequenceCount, maxLongestSequence);
-                currentSequenceCount = 1;
+            int currentConsecutiveLength = 1;
+            while(set.contains(num + currentConsecutiveLength)){
+                currentConsecutiveLength++;
             }
+            longestConsecutiveLength = Math.max(longestConsecutiveLength, currentConsecutiveLength);
         }
-        return Math.max(currentSequenceCount, maxLongestSequence);
+        return longestConsecutiveLength;
     }
 }
