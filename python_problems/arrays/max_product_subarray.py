@@ -1,6 +1,6 @@
 from typing import List
 
-
+#https://leetcode.com/problems/maximum-product-subarray/description/
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
         min_end = max_end = best = nums[0]
